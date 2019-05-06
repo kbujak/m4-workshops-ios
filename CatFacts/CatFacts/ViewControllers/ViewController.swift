@@ -23,7 +23,4 @@ class ViewController: UIViewController {
                                                                 bottom: 10,
                                                                 right: 10))
     }
-
-
 }
-

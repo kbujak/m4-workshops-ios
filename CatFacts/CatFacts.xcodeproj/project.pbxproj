@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		0F9873D5228037600075AB2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9873D4228037600075AB2B /* AppDelegate.swift */; };
 		0F9873D7228037600075AB2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9873D6228037600075AB2B /* ViewController.swift */; };
-		0F9873DA228037600075AB2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F9873D8228037600075AB2B /* Main.storyboard */; };
 		0F9873DC228037620075AB2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F9873DB228037620075AB2B /* Assets.xcassets */; };
-		0F9873DF228037620075AB2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F9873DD228037620075AB2B /* LaunchScreen.storyboard */; };
 		0F9873EA228037620075AB2B /* CatFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9873E9228037620075AB2B /* CatFactsTests.swift */; };
+		0FAB95BF2280A3E900BCD392 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FAB95BB2280A3E900BCD392 /* LaunchScreen.storyboard */; };
+		0FAB95C32280A41800BCD392 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FAB95C12280A41800BCD392 /* Localizable.strings */; };
 		C284C6B04B54B418DA964AE8 /* Pods_CatFacts_CatFactsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4A604D475F3726B111C768 /* Pods_CatFacts_CatFactsTests.framework */; };
 		F143316D4DF5FBE161643D23 /* Pods_CatFacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C81810475797F635CD655D /* Pods_CatFacts.framework */; };
 /* End PBXBuildFile section */
@@ -31,13 +31,13 @@
 		0F9873D1228037600075AB2B /* CatFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9873D4228037600075AB2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F9873D6228037600075AB2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0F9873D9228037600075AB2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F9873DB228037620075AB2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0F9873DE228037620075AB2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F9873E0228037620075AB2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F9873E5228037620075AB2B /* CatFactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatFactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9873E9228037620075AB2B /* CatFactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsTests.swift; sourceTree = "<group>"; };
 		0F9873EB228037620075AB2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FAB95BC2280A3E900BCD392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0FAB95C22280A41800BCD392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Localizable.strings; sourceTree = "<group>"; };
 		10785681283AC5123FE5B527 /* Pods-CatFacts-CatFactsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatFacts-CatFactsTests.debug.xcconfig"; path = "Target Support Files/Pods-CatFacts-CatFactsTests/Pods-CatFacts-CatFactsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		11C81810475797F635CD655D /* Pods_CatFacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatFacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C43AE9063032E114AC63B24 /* Pods-CatFacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatFacts.release.xcconfig"; path = "Target Support Files/Pods-CatFacts/Pods-CatFacts.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				0F9873F5228037BD0075AB2B /* ViewControllers */,
+				0FAB95B12280A30200BCD392 /* Generated */,
 				0F9873F4228037B00075AB2B /* Resources */,
 			);
 			path = CatFacts;
@@ -108,9 +109,8 @@
 		0F9873F4228037B00075AB2B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0F9873D8228037600075AB2B /* Main.storyboard */,
+				0FAB95BA2280A3E900BCD392 /* Base.lproj */,
 				0F9873DB228037620075AB2B /* Assets.xcassets */,
-				0F9873DD228037620075AB2B /* LaunchScreen.storyboard */,
 				0F9873E0228037620075AB2B /* Info.plist */,
 			);
 			path = Resources;
@@ -122,6 +122,22 @@
 				0F9873D6228037600075AB2B /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0FAB95B12280A30200BCD392 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		0FAB95BA2280A3E900BCD392 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				0FAB95BB2280A3E900BCD392 /* LaunchScreen.storyboard */,
+				0FAB95C12280A41800BCD392 /* Localizable.strings */,
+			);
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 		485A0E23A3526AB8B0FBF3C0 /* Frameworks */ = {
@@ -156,6 +172,8 @@
 				0F9873CE228037600075AB2B /* Frameworks */,
 				0F9873CF228037600075AB2B /* Resources */,
 				6EDFBEF3B20B2397EEBF03B4 /* [CP] Embed Pods Frameworks */,
+				0FAB95AF2280A13000BCD392 /* SwiftLint */,
+				0FAB95B02280A22000BCD392 /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -229,9 +247,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F9873DF228037620075AB2B /* LaunchScreen.storyboard in Resources */,
+				0FAB95BF2280A3E900BCD392 /* LaunchScreen.storyboard in Resources */,
+				0FAB95C32280A41800BCD392 /* Localizable.strings in Resources */,
 				0F9873DC228037620075AB2B /* Assets.xcassets in Resources */,
-				0F9873DA228037600075AB2B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +263,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0FAB95AF2280A13000BCD392 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		0FAB95B02280A22000BCD392 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen config run\n";
+		};
 		2D8D6946E2325406AB716CD2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -382,20 +436,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0F9873D8228037600075AB2B /* Main.storyboard */ = {
+		0FAB95BB2280A3E900BCD392 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0F9873D9228037600075AB2B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0F9873DD228037620075AB2B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0F9873DE228037620075AB2B /* Base */,
+				0FAB95BC2280A3E900BCD392 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0FAB95C12280A41800BCD392 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0FAB95C22280A41800BCD392 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
