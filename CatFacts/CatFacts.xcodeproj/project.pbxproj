@@ -16,6 +16,8 @@
 		C284C6B04B54B418DA964AE8 /* Pods_CatFacts_CatFactsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4A604D475F3726B111C768 /* Pods_CatFacts_CatFactsTests.framework */; };
 		EA7B2E4222807B880086E4F5 /* CatBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E4122807B880086E4F5 /* CatBreed.swift */; };
 		EA7B2E452280921E0086E4F5 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E442280921E0086E4F5 /* AppError.swift */; };
+		EA7B2E4A2280D9D00086E4F5 /* CatBreedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E492280D9D00086E4F5 /* CatBreedTests.swift */; };
+		EA7B2E4D2280DA050086E4F5 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E4C2280DA050086E4F5 /* SampleData.swift */; };
 		F143316D4DF5FBE161643D23 /* Pods_CatFacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C81810475797F635CD655D /* Pods_CatFacts.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		DB4A604D475F3726B111C768 /* Pods_CatFacts_CatFactsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatFacts_CatFactsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7B2E4122807B880086E4F5 /* CatBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreed.swift; sourceTree = "<group>"; };
 		EA7B2E442280921E0086E4F5 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		EA7B2E492280D9D00086E4F5 /* CatBreedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedTests.swift; sourceTree = "<group>"; };
+		EA7B2E4C2280DA050086E4F5 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +109,10 @@
 		0F9873E8228037620075AB2B /* CatFactsTests */ = {
 			isa = PBXGroup;
 			children = (
+				EA7B2E4B2280D9DC0086E4F5 /* Utils */,
 				0F9873E9228037620075AB2B /* CatFactsTests.swift */,
 				0F9873EB228037620075AB2B /* Info.plist */,
+				EA7B2E492280D9D00086E4F5 /* CatBreedTests.swift */,
 			);
 			path = CatFactsTests;
 			sourceTree = "<group>";
@@ -164,6 +170,14 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EA7B2E4B2280D9DC0086E4F5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EA7B2E4C2280DA050086E4F5 /* SampleData.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +410,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F9873EA228037620075AB2B /* CatFactsTests.swift in Sources */,
+				EA7B2E4D2280DA050086E4F5 /* SampleData.swift in Sources */,
+				EA7B2E4A2280D9D00086E4F5 /* CatBreedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
