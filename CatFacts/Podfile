@@ -11,6 +11,7 @@ target 'CatFacts' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'MBProgressHUD', '~> 1.1.0'
+  pod 'SwiftyJSON', '~> 4.2.0'
   # Pods for CatFacts
 
   target 'CatFactsTests' do

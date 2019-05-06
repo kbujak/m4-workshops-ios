@@ -17,6 +17,7 @@ PODS:
   - RxSwift (4.5.0)
   - SwiftGen (6.1.0)
   - SwiftLint (0.31.0)
+  - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
   - MBProgressHUD (~> 1.1.0)
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - RxSwift
   - SwiftGen
   - SwiftLint
+  - SwiftyJSON (~> 4.2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -38,6 +40,7 @@ SPEC REPOS:
     - RxSwift
     - SwiftGen
     - SwiftLint
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   iOSSnapshotTestCase: 944a73f6d9676302811a86c0cf35f0e6ef5ab2a0
@@ -49,7 +52,8 @@ SPEC CHECKSUMS:
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 2a77d6326e937bcd6d016e066aa84dc50b53863e
+PODFILE CHECKSUM: 8befd1692cf520498a33ed847bed4f96c929de8d
 
 COCOAPODS: 1.6.0
