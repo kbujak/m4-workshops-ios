@@ -7,7 +7,6 @@
 //
 
 import SwiftyJSON
-@testable import CatFacts
 
 class SampleData: NSObject {
     var breed01JSON: JSON {

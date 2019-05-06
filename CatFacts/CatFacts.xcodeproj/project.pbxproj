@@ -18,6 +18,11 @@
 		EA7B2E452280921E0086E4F5 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E442280921E0086E4F5 /* AppError.swift */; };
 		EA7B2E4A2280D9D00086E4F5 /* CatBreedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E492280D9D00086E4F5 /* CatBreedTests.swift */; };
 		EA7B2E4D2280DA050086E4F5 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E4C2280DA050086E4F5 /* SampleData.swift */; };
+		EA7B2E532280E47A0086E4F5 /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E522280E47A0086E4F5 /* AppContext.swift */; };
+		EA7B2E552280E4EC0086E4F5 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E542280E4EC0086E4F5 /* NetworkProvider.swift */; };
+		EA7B2E582280E8A80086E4F5 /* NetworkProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E562280E6480086E4F5 /* NetworkProviderMock.swift */; };
+		EA7B2E592280E93D0086E4F5 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E4C2280DA050086E4F5 /* SampleData.swift */; };
+		EA7B2E5C2280ED9A0086E4F5 /* NetworkProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E562280E6480086E4F5 /* NetworkProviderMock.swift */; };
 		F143316D4DF5FBE161643D23 /* Pods_CatFacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C81810475797F635CD655D /* Pods_CatFacts.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +57,9 @@
 		EA7B2E442280921E0086E4F5 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		EA7B2E492280D9D00086E4F5 /* CatBreedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedTests.swift; sourceTree = "<group>"; };
 		EA7B2E4C2280DA050086E4F5 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		EA7B2E522280E47A0086E4F5 /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
+		EA7B2E542280E4EC0086E4F5 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		EA7B2E562280E6480086E4F5 /* NetworkProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +106,7 @@
 		0F9873D3228037600075AB2B /* CatFacts */ = {
 			isa = PBXGroup;
 			children = (
-				EA7B2E43228091B10086E4F5 /* Extensions */,
+				EA7B2E512280E4570086E4F5 /* Context */,
 				0F9873F5228037BD0075AB2B /* ViewControllers */,
 				EA7B2E3F228079150086E4F5 /* Models */,
 				0F9873F4228037B00075AB2B /* Resources */,
@@ -165,19 +173,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		EA7B2E43228091B10086E4F5 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		EA7B2E4B2280D9DC0086E4F5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				EA7B2E4C2280DA050086E4F5 /* SampleData.swift */,
+				EA7B2E562280E6480086E4F5 /* NetworkProviderMock.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		EA7B2E512280E4570086E4F5 /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				EA7B2E522280E47A0086E4F5 /* AppContext.swift */,
+				EA7B2E542280E4EC0086E4F5 /* NetworkProvider.swift */,
+			);
+			path = Context;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,9 +410,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA7B2E452280921E0086E4F5 /* AppError.swift in Sources */,
+				EA7B2E532280E47A0086E4F5 /* AppContext.swift in Sources */,
 				EA7B2E4222807B880086E4F5 /* CatBreed.swift in Sources */,
 				0F9873D7228037600075AB2B /* ViewController.swift in Sources */,
+				EA7B2E582280E8A80086E4F5 /* NetworkProviderMock.swift in Sources */,
 				0F9873D5228037600075AB2B /* AppDelegate.swift in Sources */,
+				EA7B2E552280E4EC0086E4F5 /* NetworkProvider.swift in Sources */,
+				EA7B2E592280E93D0086E4F5 /* SampleData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +427,7 @@
 				0F9873EA228037620075AB2B /* CatFactsTests.swift in Sources */,
 				EA7B2E4D2280DA050086E4F5 /* SampleData.swift in Sources */,
 				EA7B2E4A2280D9D00086E4F5 /* CatBreedTests.swift in Sources */,
+				EA7B2E5C2280ED9A0086E4F5 /* NetworkProviderMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +633,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D TEST";
 				PRODUCT_BUNDLE_IDENTIFIER = io.swingdev.CatFactsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -639,6 +656,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D TEST";
 				PRODUCT_BUNDLE_IDENTIFIER = io.swingdev.CatFactsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

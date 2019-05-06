@@ -7,15 +7,25 @@
 //
 
 import UIKit
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let disposeBag = DisposeBag()
+    var appConext: AppContext?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        let appContext = AppContext(network: NetworkProviderMock())
+        self.appConext = appContext
+        appContext.network.fetchBreeds()
+            .subscribe(onNext: { [weak self] breeds in
+                guard self != nil else { return }
+                print("BREEDS: \(breeds)")
+            }).disposed(by: disposeBag)
         return true
     }
 
