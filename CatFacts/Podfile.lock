@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.8.2)
   - iOSSnapshotTestCase (6.0.3):
     - iOSSnapshotTestCase/SwiftSupport (= 6.0.3)
   - iOSSnapshotTestCase/Core (6.0.3)
@@ -12,6 +13,11 @@ PODS:
     - iOSSnapshotTestCase (~> 6.0)
     - Nimble (~> 8.0)
   - PureLayout (3.1.4)
+  - RxAlamofire (4.4.1):
+    - RxAlamofire/Core (= 4.4.1)
+  - RxAlamofire/Core (4.4.1):
+    - Alamofire (~> 4.8)
+    - RxSwift (~> 4.5)
   - RxCocoa (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
   - RxSwift (4.5.0)
@@ -23,6 +29,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 1.1.0)
   - Nimble-Snapshots
   - PureLayout
+  - RxAlamofire
   - RxCocoa
   - RxSwift
   - SwiftGen
@@ -31,11 +38,13 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - iOSSnapshotTestCase
     - MBProgressHUD
     - Nimble
     - Nimble-Snapshots
     - PureLayout
+    - RxAlamofire
     - RxCocoa
     - RxSwift
     - SwiftGen
@@ -43,17 +52,19 @@ SPEC REPOS:
     - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   iOSSnapshotTestCase: 944a73f6d9676302811a86c0cf35f0e6ef5ab2a0
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
   Nimble-Snapshots: 2d6d712ceb2d1850d88f850fbd7c732618106022
   PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
+  RxAlamofire: ed65f451f5a9a59419b0b9e705043dc01410edd9
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 8befd1692cf520498a33ed847bed4f96c929de8d
+PODFILE CHECKSUM: 643cf689200bcc11cb34fcf48222703c22ae80fe
 
 COCOAPODS: 1.6.0

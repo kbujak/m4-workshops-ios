@@ -30,6 +30,8 @@
 		EA7B2E582280E8A80086E4F5 /* NetworkProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E562280E6480086E4F5 /* NetworkProviderMock.swift */; };
 		EA7B2E592280E93D0086E4F5 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E4C2280DA050086E4F5 /* SampleData.swift */; };
 		EA7B2E5C2280ED9A0086E4F5 /* NetworkProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E562280E6480086E4F5 /* NetworkProviderMock.swift */; };
+		EA7B2E5F2281D6630086E4F5 /* NetworkProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E5E2281D6630086E4F5 /* NetworkProviderImpl.swift */; };
+		EA7B2E612281E3F10086E4F5 /* CatBreedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E602281E3F10086E4F5 /* CatBreedResponse.swift */; };
 		F143316D4DF5FBE161643D23 /* Pods_CatFacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C81810475797F635CD655D /* Pods_CatFacts.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		EA7B2E522280E47A0086E4F5 /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		EA7B2E542280E4EC0086E4F5 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		EA7B2E562280E6480086E4F5 /* NetworkProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderMock.swift; sourceTree = "<group>"; };
+		EA7B2E5E2281D6630086E4F5 /* NetworkProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderImpl.swift; sourceTree = "<group>"; };
+		EA7B2E602281E3F10086E4F5 /* CatBreedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +239,7 @@
 			children = (
 				EA7B2E4122807B880086E4F5 /* CatBreed.swift */,
 				EA7B2E442280921E0086E4F5 /* AppError.swift */,
+				EA7B2E602281E3F10086E4F5 /* CatBreedResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 			children = (
 				EA7B2E522280E47A0086E4F5 /* AppContext.swift */,
 				EA7B2E542280E4EC0086E4F5 /* NetworkProvider.swift */,
+				EA7B2E5E2281D6630086E4F5 /* NetworkProviderImpl.swift */,
 			);
 			path = Context;
 			sourceTree = "<group>";
@@ -438,8 +444,10 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CatFacts/Pods-CatFacts-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -448,8 +456,10 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -490,8 +500,10 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CatFacts-CatFactsTests/Pods-CatFacts-CatFactsTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -503,8 +515,10 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -532,9 +546,11 @@
 				EA7B2E582280E8A80086E4F5 /* NetworkProviderMock.swift in Sources */,
 				0F87C0632281864300910EA7 /* CatBreedDetailsViewModel.swift in Sources */,
 				0F55FB782280ABA2003351DE /* Coordinator.swift in Sources */,
+				EA7B2E612281E3F10086E4F5 /* CatBreedResponse.swift in Sources */,
 				0F896A4B2280A8EC001DC6ED /* AppCoordinator.swift in Sources */,
 				0F87C06C2281A6C300910EA7 /* CatBreedTableViewCell.swift in Sources */,
 				0F9873D7228037600075AB2B /* CatBreedsViewController.swift in Sources */,
+				EA7B2E5F2281D6630086E4F5 /* NetworkProviderImpl.swift in Sources */,
 				0F9873D5228037600075AB2B /* AppDelegate.swift in Sources */,
 				0F87C06522819EF400910EA7 /* CatBreedsViewModelImpl.swift in Sources */,
 				EA7B2E552280E4EC0086E4F5 /* NetworkProvider.swift in Sources */,
