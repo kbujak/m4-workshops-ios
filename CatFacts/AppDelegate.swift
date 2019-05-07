@@ -18,9 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         let appContext = AppContext(network: NetworkProviderMock())
+
         window = UIWindow(frame: UIScreen.main.bounds)
 
-        appCoordinator = AppCoordinator(window: window)
+        appCoordinator = AppCoordinator(context: appContext, window: window)
         appCoordinator?.start()
 
         return true

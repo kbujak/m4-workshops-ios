@@ -17,10 +17,12 @@ class NetworkProviderMock: NetworkProvider {
             DispatchQueue.global().asyncAfter(deadline: .now() + 2) { [weak self] in
                 guard self != nil else { return }
                 let sampleData = SampleData()
-                let json = sampleData.breed01JSON
+                let json1 = sampleData.breed01JSON
+                let json2 = sampleData.breed02JSON
                 do {
-                    let breed = try CatBreed(json: json)
-                    subscriber.onNext([breed])
+                    let breed1 = try CatBreed(json: json1)
+                    let breed2 = try CatBreed(json: json2)
+                    subscriber.onNext([breed1, breed2])
                 } catch {
                     subscriber.onError(error)
                 }

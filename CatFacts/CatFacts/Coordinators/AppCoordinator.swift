@@ -13,13 +13,17 @@ class AppCoordinator: RootCoordinator {
     var rootController: UINavigationController?
 
     private weak var window: UIWindow?
+    private var context: AppContext
 
-    init(window: UIWindow?) {
+    init(context: AppContext, window: UIWindow?) {
+        self.context = context
         self.window = window
     }
 
     func start() {
-        let viewController = CatBreedsViewController()
+        let viewModel = CatBreedsViewModelImpl(context: context)
+
+        let viewController = CatBreedsViewController(viewModel: viewModel)
         rootController = UINavigationController(rootViewController: viewController)
 
         window?.rootViewController = rootController

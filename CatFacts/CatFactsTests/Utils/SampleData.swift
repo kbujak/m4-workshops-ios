@@ -19,6 +19,16 @@ class SampleData: NSObject {
             ])
     }
 
+    var breed02JSON: JSON {
+        return JSON([
+            "breed": "Aegean",
+            "country": "Greece",
+            "origin": "Natural/Standard",
+            "coat": "Semi-long",
+            "pattern": "Bi- or tri-colored"
+            ])
+    }
+
     var breedInvalidJSON: JSON {
         return JSON([
             "wrongbreedkey": "Abyssinian",
