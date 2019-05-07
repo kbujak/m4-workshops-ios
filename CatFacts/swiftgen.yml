@@ -1,8 +1,10 @@
 strings:
-  paths: CatFacts/Resources/Base.lproj/Localizable.strings
-  templateName: structured-swift3
-  output: CatFacts/Generated/strings.swift
+  inputs: CatFacts/Resources/Base.lproj/Localizable.strings
+  outputs:
+    templateName: structured-swift3
+    output: CatFacts/Generated/strings.swift
 xcassets:
-  paths: CatFacts/Resources/Assets.xcassets
-  templateName: swift3
-  output: CatFacts/Generated/assets-images.swift
+  inputs: CatFacts/Resources/Assets.xcassets
+  outputs:
+    templateName: swift3
+    output: CatFacts/Generated/assets-images.swift
