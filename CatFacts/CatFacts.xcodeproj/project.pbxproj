@@ -32,6 +32,8 @@
 		EA7B2E5C2280ED9A0086E4F5 /* NetworkProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E562280E6480086E4F5 /* NetworkProviderMock.swift */; };
 		EA7B2E5F2281D6630086E4F5 /* NetworkProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E5E2281D6630086E4F5 /* NetworkProviderImpl.swift */; };
 		EA7B2E612281E3F10086E4F5 /* CatBreedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2E602281E3F10086E4F5 /* CatBreedResponse.swift */; };
+		EAFE014222820529007DD0B0 /* assets-images.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFE014022820528007DD0B0 /* assets-images.swift */; };
+		EAFE014322820529007DD0B0 /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFE014122820528007DD0B0 /* strings.swift */; };
 		F143316D4DF5FBE161643D23 /* Pods_CatFacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C81810475797F635CD655D /* Pods_CatFacts.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,8 @@
 		EA7B2E562280E6480086E4F5 /* NetworkProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderMock.swift; sourceTree = "<group>"; };
 		EA7B2E5E2281D6630086E4F5 /* NetworkProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderImpl.swift; sourceTree = "<group>"; };
 		EA7B2E602281E3F10086E4F5 /* CatBreedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedResponse.swift; sourceTree = "<group>"; };
+		EAFE014022820528007DD0B0 /* assets-images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "assets-images.swift"; sourceTree = "<group>"; };
+		EAFE014122820528007DD0B0 /* strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +205,8 @@
 		0FAB95B12280A30200BCD392 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				EAFE014022820528007DD0B0 /* assets-images.swift */,
+				EAFE014122820528007DD0B0 /* strings.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -542,6 +548,8 @@
 				EA7B2E532280E47A0086E4F5 /* AppContext.swift in Sources */,
 				0F87C0612281861F00910EA7 /* CatBreedsViewModel.swift in Sources */,
 				0F87C0682281A1FB00910EA7 /* CatBreedDetailsViewModelImpl.swift in Sources */,
+				EAFE014222820529007DD0B0 /* assets-images.swift in Sources */,
+				EAFE014322820529007DD0B0 /* strings.swift in Sources */,
 				EA7B2E4222807B880086E4F5 /* CatBreed.swift in Sources */,
 				EA7B2E582280E8A80086E4F5 /* NetworkProviderMock.swift in Sources */,
 				0F87C0632281864300910EA7 /* CatBreedDetailsViewModel.swift in Sources */,

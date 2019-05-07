@@ -34,7 +34,8 @@ class CatBreedsViewModelImpl: CatBreedsViewModel {
                 onError: { [weak self] error in
                     print("onError")
                     self?.isInProgress.accept(false)
-                    self?.errorMessage.accept(error.localizedDescription)
+                    let message = L10n.ErrorMessages.loadingFailed + ": \(error.localizedDescription)"
+                    self?.errorMessage.accept(message)
                 },
                 onSubscribed: { [weak self] in
                     print("onSubscribed")

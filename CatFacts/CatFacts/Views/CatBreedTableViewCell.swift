@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import PureLayout
 
 class CatBreedTableViewCell: UITableViewCell {
     private let titleLabel = UILabel()
+    private let iconView = UIImageView()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +26,7 @@ class CatBreedTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        addSubview(titleLabel)
+        [titleLabel, iconView].forEach { self.addSubview($0) }
 
         setupLayouts()
     }
@@ -32,6 +34,7 @@ class CatBreedTableViewCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     func setup(with viewModel: CatBreedDetailsViewModel) {
+        iconView.image = UIImage(asset: Asset.cat)
         titleLabel.text = viewModel.catBreed.breed
     }
 }
@@ -39,5 +42,9 @@ class CatBreedTableViewCell: UITableViewCell {
 extension CatBreedTableViewCell {
     private func setupLayouts() {
         titleLabel.autoCenterInSuperview()
+        iconView.autoPinEdge(toSuperviewEdge: ALEdge.left, withInset: 16)
+        iconView.autoAlignAxis(ALAxis.horizontal, toSameAxisOf: self)
+        iconView.autoSetDimensions(to: CGSize(width: 30, height: 38))
+        iconView.contentMode = ContentMode.scaleAspectFit
     }
 }
