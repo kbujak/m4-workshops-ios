@@ -69,18 +69,19 @@ extension CatBreedsViewController {
 
         activityIndicator.autoCenterInSuperview()
         errorLabel.autoCenterInSuperview()
-        errorLabel.autoPinEdge(toSuperviewEdge: ALEdge.left)
-        errorLabel.autoPinEdge(toSuperviewEdge: ALEdge.right)
+        errorLabel.autoPinEdge(toSuperviewEdge: ALEdge.left, withInset: 16)
+        errorLabel.autoPinEdge(toSuperviewEdge: ALEdge.right, withInset: 16)
     }
 
     private func setupStyles() {
         tableView.separatorStyle = .none
-        navigationItem.title = "Cat Breeds"
+        navigationItem.title = L10n.Breeds.title
         activityIndicator.hidesWhenStopped = true
         errorLabel.font = UIFont(name: "Helvetica", size: 20.0)
         errorLabel.textColor = UIColor.red
         errorLabel.isHidden = true
         errorLabel.numberOfLines = 0
         errorLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+        errorLabel.textAlignment = .center
     }
 }

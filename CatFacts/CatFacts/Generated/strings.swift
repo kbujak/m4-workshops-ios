@@ -11,6 +11,16 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
+
+  internal enum Breeds {
+    /// Cat Breeds
+    internal static let title = L10n.tr("Localizable", "Breeds.Title")
+  }
+
+  internal enum ErrorMessages {
+    /// Loading Failed
+    internal static let loadingFailed = L10n.tr("Localizable", "ErrorMessages.LoadingFailed")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name
