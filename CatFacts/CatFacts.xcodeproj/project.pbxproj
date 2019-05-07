@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0F9873D5228037600075AB2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9873D4228037600075AB2B /* AppDelegate.swift */; };
-		0F9873D7228037600075AB2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9873D6228037600075AB2B /* ViewController.swift */; };
 		0F9873DA228037600075AB2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F9873D8228037600075AB2B /* Main.storyboard */; };
 		0F9873DC228037620075AB2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F9873DB228037620075AB2B /* Assets.xcassets */; };
 		0F9873DF228037620075AB2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F9873DD228037620075AB2B /* LaunchScreen.storyboard */; };
@@ -39,7 +38,6 @@
 /* Begin PBXFileReference section */
 		0F9873D1228037600075AB2B /* CatFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9873D4228037600075AB2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0F9873D6228037600075AB2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0F9873D9228037600075AB2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F9873DB228037620075AB2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F9873DE228037620075AB2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 		0F9873F5228037BD0075AB2B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0F9873D6228037600075AB2B /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -412,7 +409,6 @@
 				EA7B2E452280921E0086E4F5 /* AppError.swift in Sources */,
 				EA7B2E532280E47A0086E4F5 /* AppContext.swift in Sources */,
 				EA7B2E4222807B880086E4F5 /* CatBreed.swift in Sources */,
-				0F9873D7228037600075AB2B /* ViewController.swift in Sources */,
 				EA7B2E582280E8A80086E4F5 /* NetworkProviderMock.swift in Sources */,
 				0F9873D5228037600075AB2B /* AppDelegate.swift in Sources */,
 				EA7B2E552280E4EC0086E4F5 /* NetworkProvider.swift in Sources */,
