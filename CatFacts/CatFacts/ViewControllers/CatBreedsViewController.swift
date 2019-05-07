@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CatBreedsViewController.swift
 //  CatFacts
 //
 //  Created by Krystian Bujak on 06/05/2019.
@@ -9,7 +9,7 @@
 import UIKit
 import PureLayout
 
-class ViewController: UIViewController {
+class CatBreedsViewController: UIViewController {
     private let anyView = UIView()
 
     override func viewDidLoad() {
@@ -22,5 +22,8 @@ class ViewController: UIViewController {
                                                                 left: 10,
                                                                 bottom: 10,
                                                                 right: 10))
+
+        view.isHidden = false
+        anyView.isHidden = false
     }
 }
