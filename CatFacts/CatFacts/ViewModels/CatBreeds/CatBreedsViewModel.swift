@@ -10,8 +10,8 @@ import Foundation
 import RxCocoa
 
 protocol CatBreedsViewModel {
-    var context: AppContext { get }
-    var breeds: BehaviorRelay<[CatBreedDetailsViewModel]> { get }
-
-    init(context: AppContext)
+    var breedsCellsModels: BehaviorRelay<[CatBreedDetailsViewModel]> { get }
+    var isInProgress: BehaviorRelay<Bool> { get }
+    var errorMessage: BehaviorRelay<String?> { get }
+    func setup()
 }

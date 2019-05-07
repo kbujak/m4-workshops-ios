@@ -107,28 +107,9 @@
 		0F87C05F228185CF00910EA7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				0F87C06622819F0B00910EA7 /* CatBreedsViewModel */,
-				0F87C0692281A21F00910EA7 /* CatBreedDetailsViewModel */,
+				EA7B2E5D2281C5610086E4F5 /* CatBreeds */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		0F87C06622819F0B00910EA7 /* CatBreedsViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				0F87C0602281861F00910EA7 /* CatBreedsViewModel.swift */,
-				0F87C06422819EF400910EA7 /* CatBreedsViewModelImpl.swift */,
-			);
-			path = CatBreedsViewModel;
-			sourceTree = "<group>";
-		};
-		0F87C0692281A21F00910EA7 /* CatBreedDetailsViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				0F87C0622281864300910EA7 /* CatBreedDetailsViewModel.swift */,
-				0F87C0672281A1FB00910EA7 /* CatBreedDetailsViewModelImpl.swift */,
-			);
-			path = CatBreedDetailsViewModel;
 			sourceTree = "<group>";
 		};
 		0F87C06A2281A69200910EA7 /* Views */ = {
@@ -274,6 +255,17 @@
 				EA7B2E542280E4EC0086E4F5 /* NetworkProvider.swift */,
 			);
 			path = Context;
+			sourceTree = "<group>";
+		};
+		EA7B2E5D2281C5610086E4F5 /* CatBreeds */ = {
+			isa = PBXGroup;
+			children = (
+				0F87C0602281861F00910EA7 /* CatBreedsViewModel.swift */,
+				0F87C06422819EF400910EA7 /* CatBreedsViewModelImpl.swift */,
+				0F87C0622281864300910EA7 /* CatBreedDetailsViewModel.swift */,
+				0F87C0672281A1FB00910EA7 /* CatBreedDetailsViewModelImpl.swift */,
+			);
+			path = CatBreeds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -7,10 +7,7 @@
 //
 
 import Foundation
-import RxCocoa
 
 protocol CatBreedDetailsViewModel {
     var catBreed: CatBreed { get }
-
-    init(catBreed: CatBreed)
 }

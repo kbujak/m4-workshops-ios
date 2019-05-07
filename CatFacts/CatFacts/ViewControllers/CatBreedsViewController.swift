@@ -13,6 +13,8 @@ import RxCocoa
 
 class CatBreedsViewController: UIViewController {
     private let tableView = UITableView()
+    private let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
+    private let errorLabel = UILabel()
     private let viewModel: CatBreedsViewModel
     private let bag = DisposeBag()
     private let catBreedCellId = "CatBreedCellId"
@@ -27,21 +29,36 @@ class CatBreedsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.addSubview(tableView)
+        tableView.register(CatBreedTableViewCell.self, forCellReuseIdentifier: catBreedCellId)
+
+        [tableView, activityIndicator, errorLabel].forEach { view.addSubview($0) }
 
         setupLayouts()
         setupStyles()
         setupBinding()
 
-        tableView.register(CatBreedTableViewCell.self, forCellReuseIdentifier: catBreedCellId)
+        viewModel.setup()
     }
 
     private func setupBinding() {
-        viewModel.breeds
+        viewModel.breedsCellsModels
             .bind(to: tableView.rx.items(cellIdentifier: catBreedCellId,
                                          cellType: CatBreedTableViewCell.self)) { _, viewModel, cell in
                 cell.setup(with: viewModel)
             }
+            .disposed(by: bag)
+
+        viewModel.isInProgress
+            .bind(to: activityIndicator.rx.isAnimating)
+            .disposed(by: bag)
+
+        viewModel.errorMessage
+            .bind(to: errorLabel.rx.text)
+            .disposed(by: bag)
+
+        viewModel.errorMessage
+            .map { $0?.isEmpty ?? false }
+            .bind(to: errorLabel.rx.isHidden)
             .disposed(by: bag)
     }
 }
@@ -49,10 +66,21 @@ class CatBreedsViewController: UIViewController {
 extension CatBreedsViewController {
     private func setupLayouts() {
         tableView.autoPinEdgesToSuperviewSafeArea()
+
+        activityIndicator.autoCenterInSuperview()
+        errorLabel.autoCenterInSuperview()
+        errorLabel.autoPinEdge(toSuperviewEdge: ALEdge.left)
+        errorLabel.autoPinEdge(toSuperviewEdge: ALEdge.right)
     }
 
     private func setupStyles() {
         tableView.separatorStyle = .none
         navigationItem.title = "Cat Breeds"
+        activityIndicator.hidesWhenStopped = true
+        errorLabel.font = UIFont(name: "Helvetica", size: 20.0)
+        errorLabel.textColor = UIColor.red
+        errorLabel.isHidden = true
+        errorLabel.numberOfLines = 0
+        errorLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
     }
 }
