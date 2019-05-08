@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol AppCoordinatorDelegate: AnyObject {
-    func didSelectCell(with catBreedDetailsViewModel: CatBreedDetailsViewModel)
+    func didSelect(breed: CatBreed)
 }
 
 class AppCoordinator: RootCoordinator {
@@ -18,7 +18,7 @@ class AppCoordinator: RootCoordinator {
 
     private weak var window: UIWindow?
     private var context: AppContext
-    private var childs: [ChildCoordinator] = []
+    private var children: [ChildCoordinator] = []
 
     init(context: AppContext, window: UIWindow?) {
         self.context = context
@@ -36,28 +36,32 @@ class AppCoordinator: RootCoordinator {
         window?.makeKeyAndVisible()
     }
 
-    func pop(_ coordinatod: ChildCoordinator) {
+    func pop(_ coordinator: ChildCoordinator) {
         guard
-            let viewController = coordinatod.controller,
-            let index = childs.firstIndex(where: { $0 === coordinatod })
+            let viewController = coordinator.controller,
+            let index = children.firstIndex(where: { $0 === coordinator })
             else { return }
-        
-        childs.remove(at: index)
+
+        children.remove(at: index)
         viewController.removeFromParent()
     }
 
     private func push(_ coordinator: ChildCoordinator) {
         guard let viewController = coordinator.controller else { return }
-        
-        childs.append(coordinator)
-        rootController?.pushViewController(viewController, animated: true)
+
+        children.append(coordinator)
+
+        DispatchQueue.main.async { [weak self] in
+            self?.rootController?.pushViewController(viewController, animated: true)
+        }
+
     }
 }
 
 extension AppCoordinator: AppCoordinatorDelegate {
-    func didSelectCell(with catBreedDetailsViewModel: CatBreedDetailsViewModel) {
+    func didSelect(breed: CatBreed) {
         let catBreedDetailsCoordinator = CatBreedDetailsCoordinator(context: context,
-                                                                    viewModel: catBreedDetailsViewModel)
+                                                                    breed: breed)
         catBreedDetailsCoordinator.rootCoordinator = self
         catBreedDetailsCoordinator.start()
 

@@ -16,9 +16,9 @@ class CatBreedDetailsCoordinator: ChildCoordinator {
     private var context: AppContext
     private var viewModel: CatBreedDetailsViewModel
 
-    init(context: AppContext, viewModel: CatBreedDetailsViewModel) {
+    init(context: AppContext, breed: CatBreed) {
         self.context = context
-        self.viewModel = viewModel
+        self.viewModel = CatBreedDetailsViewModelImpl(catBreed: breed)
         print(viewModel.catBreed.breed)
     }
 

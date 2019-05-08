@@ -22,5 +22,10 @@ class CatBreedDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupStyles()
+    }
+
+    private func setupStyles() {
+        view.backgroundColor = UIColor.orange
     }
 }

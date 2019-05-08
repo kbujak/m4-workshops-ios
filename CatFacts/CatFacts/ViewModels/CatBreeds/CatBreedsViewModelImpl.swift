@@ -53,7 +53,7 @@ class CatBreedsViewModelImpl: CatBreedsViewModel {
         triggerCell
             .asObserver()
             .subscribe(onNext: { [weak self] catBreedDetailsViewModel in
-                self?.delegate?.didSelectCell(with: catBreedDetailsViewModel)
+                self?.delegate?.didSelect(breed: catBreedDetailsViewModel.catBreed)
             })
             .disposed(by: bag)
     }
