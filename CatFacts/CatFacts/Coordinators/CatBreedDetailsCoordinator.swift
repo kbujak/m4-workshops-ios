@@ -14,15 +14,16 @@ class CatBreedDetailsCoordinator: ChildCoordinator {
     weak var rootCoordinator: RootCoordinator?
 
     private var context: AppContext
-    private var viewModel: CatBreedDetailsViewModel
+    private var breed: CatBreed
 
     init(context: AppContext, breed: CatBreed) {
         self.context = context
-        self.viewModel = CatBreedDetailsViewModelImpl(catBreed: breed)
-        print(viewModel.catBreed.breed)
+        self.breed = breed
+        print(breed)
     }
 
     func start() {
+        let viewModel = CatBreedDetailsViewModelImpl(catBreed: breed)
         controller = CatBreedDetailsViewController(viewModel: viewModel)
     }
 }
